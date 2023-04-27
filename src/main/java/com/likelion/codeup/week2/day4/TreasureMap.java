@@ -6,9 +6,11 @@ public class TreasureMap {
             String[] map = new String[n];
 
             for(int i = 0; i < n;  i++){
-                map[i] = String.format("%" + n + "s", Integer.toBinaryString(arr1[i] | arr2[i]));
-                map[i].replaceAll("1","#");
-                map[i].replaceAll("0"," ");
+
+                map[i] = String.format("%" + n + "s",
+                        Integer.toBinaryString(arr1[i] | arr2[i]))
+                        .replace("1" , "#")
+                        .replace("0" , " ");
             }
             return map;
         }
