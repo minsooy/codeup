@@ -15,23 +15,16 @@ public class q1099 {
             }
         }
 
-        while(true){
-            if(board[yCord][xCord] == 2){
-                board[yCord][xCord] = 9;
-                break;
-            }
-
+        while(board[yCord][xCord] != 2){
             board[yCord][xCord] = 9;
-
             if(board[yCord][xCord + 1] != 1){
                 xCord++;
-            }else if(board[yCord + 1][xCord] != 1){
+            } else if(board[yCord + 1][xCord] != 1) {
                 yCord++;
-            } else{
-                break;
             }
-
+            else break;
         }
+        board[yCord][xCord] = 9;
 
 
         for (int i = 0; i < 10; i++) {
